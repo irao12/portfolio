@@ -1,0 +1,18 @@
+@use "./colors" as colors;
+@use "./fonts";
+@use "../util/functions" as f;
+
+* {
+	color: colors.$secondary;
+	font-family: "OpenSans";
+	font-weight: 400;
+}
+
+h1 {
+	font-size: f.rem(36);
+	font-weight: 400;
+}
+
+h2 {
+	font-size: f.rem(20);
+}
