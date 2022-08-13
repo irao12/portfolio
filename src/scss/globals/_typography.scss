@@ -1,6 +1,7 @@
 @use "./colors" as colors;
 @use "./fonts";
 @use "../util/functions" as f;
+@use "../util/breakpoints" as b;
 
 * {
 	color: colors.$secondary;
@@ -13,10 +14,45 @@ h1 {
 	font-weight: 700;
 }
 
+a {
+	font-size: f.rem(16);
+}
+
 h2 {
 	font-size: f.rem(20);
 }
 
 p {
 	color: colors.$secondary-text;
+	font-size: f.rem(18);
+}
+
+@include b.breakpoints-up(large) {
+	h1 {
+		font-size: f.rem(44);
+	}
+	h2 {
+		font-size: f.rem(30);
+	}
+	p {
+		font-size: f.rem(18);
+	}
+	a {
+		font-size: f.rem(20);
+	}
+}
+
+@include b.breakpoints-up(xlarge) {
+	h1 {
+		font-size: f.rem(48);
+	}
+	h2 {
+		font-size: f.rem(34);
+	}
+	p {
+		font-size: f.rem(22);
+	}
+	a {
+		font-size: f.rem(22);
+	}
 }

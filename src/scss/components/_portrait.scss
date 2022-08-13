@@ -1,8 +1,14 @@
 @use "../util/functions" as f;
+@use "../util/breakpoints" as b;
 
 .portrait {
-	width: 200px;
-	height: 200px;
-	box-shadow: 0 0 f.rem(20) rgba(255, 255, 255, 0.384);
+	width: 225px;
+	height: 225px;
+	box-shadow: 0 0 f.rem(30) rgba(179, 179, 179, 0.507);
 	border-radius: 50%;
+
+	@include b.breakpoints-up(large) {
+		width: 275px;
+		height: 275px;
+	}
 }
