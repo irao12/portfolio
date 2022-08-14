@@ -23,6 +23,9 @@
 
 .project-div {
 	background-color: white;
+	background-size: cover;
+	background-position: center;
+
 	box-shadow: rgba(255, 255, 255) 0 0px 5px;
 	border-radius: f.rem(10);
 	margin: f.rem(30) f.rem(50);
@@ -39,26 +42,21 @@
 
 	&.todo {
 		background-image: url(./images/todolist.png);
-		background-size: cover;
 		background-position-x: (-5px);
 	}
 
 	&.weather {
 		background-image: url(./images/weather.png);
-		background-size: cover;
 	}
 
 	&.etch {
 		background-image: url(./images/etch.png);
-		background-size: cover;
 	}
 	&.connect-four {
 		background-image: url(./images/connectfour.png);
-		background-size: cover;
 	}
 	&.caesar {
 		background-image: url(./images/caesar.png);
-		background-size: cover;
 	}
 
 	@media (hover) {
@@ -111,7 +109,7 @@
 			width: f.rem(30);
 			height: f.rem(30);
 			background-image: url("./images/eye.png");
-			background-size: cover;
+			background-size: contain;
 		}
 	}
 
