@@ -2,16 +2,18 @@
 @use "../util/functions" as f;
 @use "../util/breakpoints" as b;
 
+$nav-height: f.rem(80);
+
 body {
 	background-color: colors.$primary;
 }
 
 nav {
 	width: 100%;
-	height: f.rem(80);
+	height: $nav-height;
 
 	box-shadow: rgba(0, 0, 0, 0.432) 0px 3px 16px;
-	background-color: colors.$primary;
+	background-color: #2d334b;
 
 	padding: f.rem(5) f.rem(10);
 	display: flex;
@@ -129,6 +131,85 @@ main {
 		.intro {
 			max-width: f.rem(700);
 		}
+	}
+}
+
+.skills-and-exp {
+	height: f.rem(800);
+	width: 90%;
+
+	margin: 0 auto;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: ce;
+	align-items: center;
+
+	.blocks {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.skills,
+	.experience {
+		width: 100%;
+		height: f.rem(350);
+
+		padding: f.rem(36) 0;
+		margin-bottom: f.rem(30);
+		text-align: center;
+
+		border-radius: f.rem(16);
+		background-color: #1f2129;
+
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+
+		h2 {
+			font-weight: 700;
+			text-align: center;
+			margin-bottom: f.rem(24);
+		}
+	}
+
+	@include b.breakpoints-up(large) {
+		height: f.rem(400);
+		gap: f.rem(36);
+		padding-top: f.rem(40);
+
+		.blocks {
+			flex-direction: row;
+			gap: f.rem(30);
+		}
+
+		.skills,
+		.experience {
+			margin-bottom: 0;
+		}
+		.exp {
+			align-items: flex-start;
+		}
+	}
+}
+
+.skill-div {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding-top: f.rem(15);
+}
+
+.exp {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0 f.rem(22);
+	margin-bottom: f.rem(20);
+
+	> h3 {
+		font-size: f.rem(20);
 	}
 }
 

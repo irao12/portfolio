@@ -2,8 +2,9 @@
 @use "../util/breakpoints" as b;
 
 .portrait {
-	width: 225px;
-	height: 225px;
+	width: 200px;
+	height: 200px;
+	margin-top: f.rem(20);
 	box-shadow: 0 0 f.rem(30) rgba(179, 179, 179, 0.507);
 	border-radius: 50%;
 
