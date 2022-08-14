@@ -1,2 +1,2 @@
 import "./UI.js";
-import "./projects";
+import projects from "./projects";

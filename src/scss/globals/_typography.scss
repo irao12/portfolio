@@ -19,9 +19,13 @@ a {
 }
 
 h2 {
-	font-size: f.rem(20);
+	font-size: f.rem(22);
 }
 
+h3 {
+	font-size: f.rem(20);
+	font-weight: 700;
+}
 p {
 	color: colors.$secondary-text;
 	font-size: f.rem(18);
@@ -33,6 +37,9 @@ p {
 	}
 	h2 {
 		font-size: f.rem(30);
+	}
+	h3 {
+		font-size: f.rem(26);
 	}
 	p {
 		font-size: f.rem(18);
@@ -50,7 +57,7 @@ p {
 		font-size: f.rem(34);
 	}
 	p {
-		font-size: f.rem(22);
+		font-size: f.rem(20);
 	}
 	a {
 		font-size: f.rem(22);

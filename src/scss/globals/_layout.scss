@@ -19,7 +19,9 @@ nav {
 	align-items: center;
 
 	position: fixed;
+	z-index: 1;
 	top: 0;
+
 	h2 {
 		margin-left: f.rem(10);
 	}
@@ -85,7 +87,7 @@ main {
 		.intro {
 			justify-content: center;
 			text-align: left;
-			width: 50%;
+			width: 40%;
 			max-width: f.rem(600);
 		}
 	}

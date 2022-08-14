@@ -1,0 +1,123 @@
+@use "../util/functions" as f;
+@use "../util/breakpoints" as b;
+
+.projects-section {
+	h2 {
+		margin: auto;
+		text-align: center;
+		margin-top: f.rem(20);
+		margin-bottom: f.rem(30);
+	}
+}
+
+.project-list {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	flex-flow: row wrap;
+	gap: f.rem(60);
+
+	@include b.breakpoints-up(large) {
+		grid-template-columns: auto auto;
+		row-gap: f.rem(30);
+	}
+	@include b.breakpoints-up(xlarge) {
+		grid-template-columns: auto auto auto;
+	}
+}
+
+.project-div {
+	background-color: white;
+	box-shadow: rgba(255, 255, 255) 0 0px 5px;
+	border-radius: f.rem(10);
+	margin: f.rem(30) f.rem(80);
+	width: min(f.rem(325), 90%);
+	height: f.rem(425);
+
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+
+	overflow: hidden;
+
+	&.todo {
+		background-image: url(./images/todolist.png);
+		background-size: cover;
+		background-position-x: (-5px);
+	}
+
+	&.weather {
+		background-image: url(./images/weather.png);
+		background-size: cover;
+	}
+
+	&.etch {
+		background-image: url(./images/etch.png);
+		background-size: cover;
+	}
+	&.connect-four {
+		background-image: url(./images/connectfour.png);
+		background-size: cover;
+	}
+	&.caesar {
+		background-image: url(./images/caesar.png);
+		background-size: cover;
+	}
+
+	@media (hover) {
+		&:hover .project-content {
+			transform: translateY(0);
+		}
+	}
+}
+
+.project-content {
+	height: 70%;
+	padding: 0 f.rem(20);
+	display: flex;
+	flex-direction: column;
+
+	position: relative;
+	border: none;
+	background-color: #393939f5;
+
+	transition: transform 500ms ease-in-out;
+
+	.project-name {
+		padding: f.rem(30) 0;
+	}
+
+	.project-desc {
+		color: white;
+	}
+
+	.link-div {
+		position: absolute;
+		bottom: f.rem(30);
+		align-self: flex-end;
+		display: flex;
+		gap: f.rem(20);
+		a {
+			cursor: pointer;
+		}
+
+		.github-div {
+			width: f.rem(30);
+			height: f.rem(30);
+			background-image: url("./images/github.png");
+			background-size: cover;
+		}
+		.demo-div {
+			width: f.rem(30);
+			height: f.rem(30);
+			background-image: url("./images/eye.png");
+			background-size: cover;
+		}
+	}
+
+	@media (hover) {
+		transform: translateY(100%);
+	}
+}
