@@ -3,6 +3,7 @@
 
 .projects-section {
 	h2 {
+		font-size: f.rem(32);
 		margin: auto;
 		text-align: center;
 		margin-top: f.rem(20);
@@ -17,23 +18,15 @@
 	align-items: center;
 
 	flex-flow: row wrap;
-	gap: f.rem(60);
-
-	@include b.breakpoints-up(large) {
-		grid-template-columns: auto auto;
-		row-gap: f.rem(30);
-	}
-	@include b.breakpoints-up(xlarge) {
-		grid-template-columns: auto auto auto;
-	}
+	gap: f.rem(80);
 }
 
 .project-div {
 	background-color: white;
 	box-shadow: rgba(255, 255, 255) 0 0px 5px;
 	border-radius: f.rem(10);
-	margin: f.rem(30) f.rem(80);
-	width: min(f.rem(325), 90%);
+	margin: f.rem(30) f.rem(50);
+	width: min(f.rem(325), 95%);
 	height: f.rem(425);
 
 	display: flex;

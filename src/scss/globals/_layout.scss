@@ -47,6 +47,14 @@ nav {
 			}
 		}
 	}
+
+	@include b.breakpoints-up(large) {
+		padding: f.rem(5) f.rem(30) f.rem(5) f.rem(10);
+	}
+
+	@include b.breakpoints-up(xlarge) {
+		padding: f.rem(5) f.rem(40) f.rem(5) f.rem(10);
+	}
 }
 
 body {
@@ -81,6 +89,28 @@ main {
 		}
 	}
 
+	.links {
+		margin: f.rem(20) auto;
+		width: f.rem(100);
+		display: flex;
+		align-items: center;
+		gap: f.rem(20);
+		.gh-link {
+			cursor: pointer;
+			.gh-icon {
+				width: f.rem(40);
+				height: f.rem(40);
+			}
+		}
+		.linkedin-link {
+			cursor: pointer;
+			.linkedin-icon {
+				width: f.rem(40);
+				height: f.rem(40);
+			}
+		}
+	}
+
 	@include b.breakpoints-up(large) {
 		flex-direction: row-reverse;
 
@@ -89,6 +119,9 @@ main {
 			text-align: left;
 			width: 40%;
 			max-width: f.rem(600);
+		}
+		.links {
+			margin: f.rem(40) 0;
 		}
 	}
 
