@@ -35,6 +35,8 @@
 
 	overflow: hidden;
 
+	transition: transform 500ms ease-in-out;
+
 	&.todo {
 		background-image: url(./images/todolist.png);
 		background-size: cover;
@@ -62,6 +64,9 @@
 	@media (hover) {
 		&:hover .project-content {
 			transform: translateY(0);
+		}
+		&:hover {
+			transform: scale(1.08);
 		}
 	}
 }
